@@ -1,0 +1,22 @@
+{
+  "name": "nada-portfolio",
+  "version": "1.0.0",
+  "description": "Premium Animated Bilingual Portfolio for Nada Nasser Mohamed",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "serve": "python -m http.server 3000",
+    "build:data": "python scripts/build_portfolio_data.py && python scripts/build_full_database.py"
+  },
+  "keywords": [
+    "portfolio",
+    "bilingual",
+    "arabic",
+    "english",
+    "marketing",
+    "content-creation",
+    "social-media"
+  ],
+  "author": "Nada Nasser Mohamed",
+  "license": "UNLICENSED"
+}

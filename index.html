@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nada Nasser Mohamed | Portfolio — Content Creator, Social Media Specialist & Marketing Coordinator</title>
+  <meta name="description" content="Official Interactive Bilingual Portfolio of Nada Nasser Mohamed. Content Creator, Social Media Specialist, and Marketing Coordinator with 24 managed client pages, 114k+ views, and 265 original assets.">
+  
+  <!-- Google Fonts: Cairo (Arabic) & Outfit + Plus Jakarta Sans (English) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+<body>
+  <!-- Ambient Interactive Canvas Background -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <div class="app-container">
+    <!-- ====================================================================
+         Sticky Navigation Header
+         ==================================================================== -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <!-- Brand Logo -->
+        <a href="#hero" class="brand-logo">
+          <div class="brand-symbol">N</div>
+          <div class="brand-text">
+            <h1 data-i18n-en="Nada Nasser" data-i18n-ar="ندى ناصر">Nada Nasser</h1>
+            <p data-i18n-en="Marketing Specialist" data-i18n-ar="أخصائية تسويق ومحتوى">Marketing Specialist</p>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="nav-menu" id="nav-menu">
+          <a href="#projects" class="nav-link" data-i18n-en="Projects" data-i18n-ar="المشاريع">Projects</a>
+          <a href="#metrics" class="nav-link" data-i18n-en="Impact & Metrics" data-i18n-ar="الإحصائيات">Impact & Metrics</a>
+          <a href="#repository" class="nav-link" data-i18n-en="Repository Files" data-i18n-ar="مستودع الملفات">Repository Files</a>
+          <a href="#about" class="nav-link" data-i18n-en="About & Experience" data-i18n-ar="الخبرات والمسيرة">About & Experience</a>
+          <a href="#contact" class="nav-link" data-i18n-en="Contact" data-i18n-ar="تواصل معي">Contact</a>
+        </nav>
+
+        <!-- Header Actions: Ambient Audio & Language Switcher -->
+        <div class="header-actions">
+          <!-- Ambient Music Controller -->
+          <div class="music-controller" title="Background Ambient Music">
+            <button class="music-btn music-toggle-btn" aria-label="Toggle Ambient Music">
+              <span class="icon-play">▶</span>
+              <span class="icon-pause" style="display:none;">⏸</span>
+            </button>
+            <div class="music-visualizer" title="Sound Visualizer">
+              <span class="visualizer-bar"></span>
+              <span class="visualizer-bar"></span>
+              <span class="visualizer-bar"></span>
+              <span class="visualizer-bar"></span>
+            </div>
+            <div class="volume-slider-wrap">
+              <input type="range" class="volume-slider" min="0" max="100" value="45" title="Music Volume">
+            </div>
+          </div>
+
+          <!-- Bilingual Language Switcher -->
+          <div class="lang-toggle" id="lang-toggle-btn" title="Switch Language / تبديل اللغة">
+            <span class="lang-option lang-option-en active">EN</span>
+            <span style="color:var(--text-dim); font-size:0.75rem;">|</span>
+            <span class="lang-option lang-option-ar">AR</span>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==================================================================
+           Hero Landing Section
+           ================================================================== -->
+      <section class="hero-section" id="hero">
+        <div class="container">
+          <!-- Optional Ambient Music Invitation Banner -->
+          <div class="music-invitation-banner" id="music-invitation-banner">
+            <div class="music-invitation-text">
+              <span>🎵</span>
+              <span data-i18n-en="Enhance your experience with calm ambient background music?" data-i18n-ar="هل ترغب في الاستماع إلى موسيقى هادئة أثناء تصفح المعرض؟">
+                Enhance your experience with calm ambient background music?
+              </span>
+            </div>
+            <div style="display:flex; gap:0.5rem;">
+              <button class="btn btn-sm btn-primary" id="enable-music-banner-btn" data-i18n-en="Play Music" data-i18n-ar="تشغيل الموسيقى">
+                Play Music
+              </button>
+              <button class="btn btn-sm btn-secondary" id="dismiss-music-banner-btn" data-i18n-en="Dismiss" data-i18n-ar="إغلاق">
+                ✕
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-grid">
+            <!-- Hero Text -->
+            <div class="hero-content-col">
+              <div class="hero-pill">
+                <span class="hero-pill-dot"></span>
+                <span data-i18n-en="Verified Marketing & Content Portfolio" data-i18n-ar="بورتفوليو موثق لصناعة المحتوى والتسويق">
+                  Verified Marketing & Content Portfolio
+                </span>
+              </div>
+
+              <h2 class="hero-title" id="hero-name">
+                Nada Nasser Mohamed
+              </h2>
+
+              <p class="text-gradient" id="hero-title" style="font-size:1.35rem; font-weight:700; margin-bottom:1rem; display:block;">
+                Content Creator | Social Media Specialist | Marketing Coordinator
+              </p>
+
+              <p class="hero-subtitle" id="hero-description">
+                Results-driven Content Creator and Marketing Coordinator experienced in managing content calendars across 24 social media pages. Skilled in campaign ideation, video scriptwriting, coordinating video productions with ~114,000 views, and paid advertising performance monitoring.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#projects" class="btn btn-primary" data-i18n-en="Explore Projects" data-i18n-ar="استكشاف المشاريع">
+                  Explore Projects ▾
+                </a>
+                <a href="NADA NASSER MOHAMED con.pdf" target="_blank" class="btn btn-secondary" data-i18n-en="View Official CV (PDF)" data-i18n-ar="عرض السيرة الذاتية (PDF)">
+                  📄 View Official CV
+                </a>
+                <a href="#repository" class="btn btn-secondary" data-i18n-en="Browse 265 Files" data-i18n-ar="تصفح الـ 265 ملفاً">
+                  🗂️ Browse 265 Files
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero Portrait Card -->
+            <div class="hero-media-col">
+              <div class="hero-portrait-card">
+                <div class="portrait-glow-ring"></div>
+                <div class="portrait-img-wrap">
+                  <img src="WhatsApp Image 2026-10-23 at 10.43.44 PM.jpeg" alt="Nada Nasser Mohamed" class="portrait-img">
+                  <div class="portrait-overlay">
+                    <div class="portrait-name" data-i18n-en="Nada Nasser Mohamed" data-i18n-ar="ندى ناصر محمد">Nada Nasser Mohamed</div>
+                    <div class="portrait-role" data-i18n-en="Beni Suef, Egypt" data-i18n-ar="بني سويف، مصر">📍 Beni Suef, Egypt</div>
+                    <div class="portrait-badge-row">
+                      <span class="portrait-badge" data-i18n-en="24 Pages Managed" data-i18n-ar="24 صفحة عميل">24 Pages Managed</span>
+                      <span class="portrait-badge" data-i18n-en="114K+ Views" data-i18n-ar="114 ألف مشاهدة">114K+ Views</span>
+                      <span class="portrait-badge" data-i18n-en="Rally Society VP" data-i18n-ar="نائب رئيس جمعية رالي">Rally Society VP</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           Verified Metrics Bar
+           ================================================================== -->
+      <section class="metrics-section" id="metrics">
+        <div class="container">
+          <div class="metrics-grid" id="metrics-grid">
+            <!-- Dynamically populated from PORTFOLIO_DATA -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           Project Exploration & Interactive Previews Section
+           ================================================================== -->
+      <section class="section-wrap" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n-en="Interactive Digital Exhibition" data-i18n-ar="معرض المشاريع التفاعلي">
+              Interactive Digital Exhibition
+            </span>
+            <h2 class="section-title" data-i18n-en="Real Projects, Live Previews & Actual Evidence" data-i18n-ar="مشاريع حقيقية، معاينات حية وأدلة موثقة">
+              Real Projects, Live Previews & Actual Evidence
+            </h2>
+            <p class="section-description" data-i18n-en="Explore complete marketing campaigns, live spreadsheets, video scripts, original video productions, and design masterfiles directly inside the portfolio." data-i18n-ar="استكشف حملات تسويقية متكاملة، جداول إكسيل تفاعلية، اسكريبتات وفيديوهات منفذة، وملفات تصميم أصلية مباشرة دون الحاجة لروابط خارجية.">
+              Explore complete marketing campaigns, live spreadsheets, video scripts, original video productions, and design masterfiles directly inside the portfolio.
+            </p>
+          </div>
+
+          <!-- Search & Filter Controls -->
+          <div class="filter-search-container">
+            <div class="search-input-wrap">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="main-project-search" class="search-input" placeholder="Search projects by client, technology, campaign, or keyword..." data-i18n-placeholder-en="Search projects by client, technology, campaign, or keyword..." data-i18n-placeholder-ar="ابحث في المشاريع بالعميل، التقنية، الحملة، أو الكلمات المفتاحية...">
+            </div>
+
+            <!-- Category Pills -->
+            <div class="category-pills" id="category-pills-container">
+              <!-- Dynamically populated from PORTFOLIO_DATA -->
+            </div>
+          </div>
+
+          <!-- Projects Grid Container -->
+          <div class="projects-grid" id="projects-grid">
+            <!-- Dynamically populated from PORTFOLIO_DATA -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           Complete 265-File Repository Explorer
+           ================================================================== -->
+      <section class="section-wrap" id="repository" style="background:rgba(8,13,26,0.35); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
+        <div class="container" id="repository-explorer-container">
+          <!-- Dynamically populated from PORTFOLIO_DATA -->
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           About, Experience & Leadership Section
+           ================================================================== -->
+      <section class="section-wrap" id="about">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag" data-i18n-en="Professional Background" data-i18n-ar="الخلفية المهنية والتعليم">
+              Professional Background
+            </span>
+            <h2 class="section-title" data-i18n-en="Verified Experience & Leadership" data-i18n-ar="الخبرات العملية والقيادة الطلابية">
+              Verified Experience & Leadership
+            </h2>
+            <p class="section-description" data-i18n-en="Extracted strictly from verified employment records, student leadership initiatives, and academic credentials." data-i18n-ar="بيانات موثقة مستخرجة بالكامل من سجلات الخبرة الرسمية، الأنشطة القيادية، والسيرة الذاتية المعتمدة.">
+              Extracted strictly from verified employment records, student leadership initiatives, and academic credentials.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <!-- Left Column: Bio & Skills -->
+            <div class="about-bio-col glass-panel" style="padding:2.25rem;">
+              <h3 style="font-size:1.4rem; font-weight:700; color:var(--accent-cyan); margin-bottom:1rem;" data-i18n-en="Academic Education" data-i18n-ar="المؤهل الأكاديمي">
+                🎓 Academic Education
+              </h3>
+              <p id="about-education" style="color:var(--text-secondary); margin-bottom:2rem; line-height:1.6;">
+                Bachelor of Science — Zoology Department, Faculty of Science, Beni Suef University (Expected Graduation: 2028)
+              </p>
+
+              <h3 style="font-size:1.3rem; font-weight:700; color:var(--accent-blue); margin-bottom:0.75rem;" data-i18n-en="Core Marketing Competencies" data-i18n-ar="الكفاءات التسويقية الأساسية">
+                ⚡ Core Marketing Competencies
+              </h3>
+              <div class="skills-grid" id="core-skills-grid">
+                <!-- Dynamically populated -->
+              </div>
+
+              <h3 style="font-size:1.3rem; font-weight:700; color:var(--accent-violet); margin-top:2rem; margin-bottom:0.75rem;" data-i18n-en="Tools & Platforms" data-i18n-ar="الأدوات والمنصات التقنية">
+                🛠️ Tools & Platforms
+              </h3>
+              <div class="skills-grid" id="tech-tools-grid">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Right Column: Experience Timeline -->
+            <div class="experience-timeline" id="experience-timeline">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           Contact Section
+           ================================================================== -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="contact-card-box">
+            <span class="section-tag" data-i18n-en="Get in Touch" data-i18n-ar="تواصل مباشر">
+              Get in Touch
+            </span>
+            <h2 class="section-title" data-i18n-en="Let's Build Impactful Content Together" data-i18n-ar="لنصنع محتوى مؤثراً وحملات استثنائية معاً">
+              Let's Build Impactful Content Together
+            </h2>
+            <p style="font-size:1.1rem; color:var(--text-secondary); max-width:650px; margin:0 auto;" data-i18n-en="Open for marketing coordination, content creation, social media strategy, and brand campaign development." data-i18n-ar="متاحة لتنسيق التسويق، صناعة المحتوى، استراتيجيات السوشيال ميديا، وإدارة الحملات الإعلانية.">
+              Open for marketing coordination, content creation, social media strategy, and brand campaign development.
+            </p>
+
+            <div class="contact-channels">
+              <a href="mailto:nada.qotp.uni@gmail.com" class="contact-pill ltr-only">
+                ✉️ nada.qotp.uni@gmail.com
+              </a>
+              <a href="tel:01065746707" class="contact-pill ltr-only">
+                📞 01065746707
+              </a>
+              <a href="NADA NASSER MOHAMED con.pdf" target="_blank" class="contact-pill" data-i18n-en="Download CV (PDF)" data-i18n-ar="تحميل السيرة الذاتية (PDF)">
+                📄 Download CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====================================================================
+         Footer
+         ==================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © 2026 <strong style="color:var(--text-primary);">Nada Nasser Mohamed</strong>. 
+          <span data-i18n-en="All project files and intellectual property preserved." data-i18n-ar="جميع ملفات المشاريع والحقوق الفكرية محفوظة.">All project files and intellectual property preserved.</span>
+        </p>
+        <p style="font-size:0.75rem; margin-top:0.4rem; color:var(--text-dim);" data-i18n-en="Premium Bilingual Digital Portfolio Architecture • 265 Discovered Assets" data-i18n-ar="بورتفوليو رقمي تفاعلي متقدم ثنائي اللغة • 265 أصلاً وملفاً موثقاً">
+          Premium Bilingual Digital Portfolio Architecture • 265 Discovered Assets
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ====================================================================
+       Project Details Modal Dialog
+       ==================================================================== -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="modal-project-title">Project Title</h3>
+          <p id="modal-project-category">Category</p>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">
+          ✕
+        </button>
+      </div>
+
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" data-tab="overview" data-i18n-en="Overview & Highlights" data-i18n-ar="نظرة عامة وأبرز الملامح">
+          Overview & Highlights
+        </button>
+        <button class="modal-tab-btn" data-tab="interactive" data-i18n-en="Interactive Previews" data-i18n-ar="المعاينة الحية التفاعلية">
+          Interactive Previews
+        </button>
+        <button class="modal-tab-btn" data-tab="files" data-i18n-en="Project Files" data-i18n-ar="ملفات المشروع">
+          Project Files
+        </button>
+      </div>
+
+      <div class="modal-body" id="modal-body-content">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       Image & PSD Lightbox
+       ==================================================================== -->
+  <div class="modal-overlay" id="image-lightbox">
+    <div style="position:relative; max-width:92vw; max-height:92vh; display:flex; flex-direction:column; align-items:center;">
+      <button class="modal-close-btn" id="lightbox-close-btn" style="position:absolute; top:-1rem; right:-1rem; z-index:10; background:rgba(0,0,0,0.85);">
+        ✕
+      </button>
+      <img src="" alt="Artwork Preview" class="lightbox-image" style="max-width:100%; max-height:82vh; border-radius:var(--radius-md); box-shadow:var(--shadow-lg); object-fit:contain;">
+      <div style="margin-top:1rem; display:flex; gap:1rem;">
+        <a href="" download class="btn btn-primary lightbox-download-btn" data-i18n-en="Download High-Res Original" data-i18n-ar="تحميل الأصل عالي الدقة">
+          📥 Download Original
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data/portfolio-database.js"></script>
+  <script src="js/audio-player.js"></script>
+  <script src="js/inventory-viewer.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
